@@ -1,0 +1,57 @@
+site_name: iMED Lab Server Guide
+site_description: Public guide for iMED lab GPU workstations
+site_url: https://trz0313.github.io/lab-server-docs/
+
+repo_url: https://github.com/trz0313/lab-server-docs
+repo_name: trz0313/lab-server-docs
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.instant
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - VPN: vpn.md
+  - SSH Login: ssh-login.md
+  - VS Code Remote SSH: vscode-remote.md
+  - Directory Structure: directories.md
+  - Conda Environment: conda.md
+  - GPU Usage Rules: gpu-usage.md
+  - Hardware Dashboard: dashboard.md
+  - Long-Use Tracker: usage-tracker.md
+  - FAQ: faq.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
