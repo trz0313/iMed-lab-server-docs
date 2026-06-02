@@ -5,6 +5,4 @@ cd "$(dirname "$0")/.."
 
 bash scripts/ensure_env.sh
 
-source .venv/bin/activate
-
-python -m mkdocs serve
+.venv/bin/python -m mkdocs serve

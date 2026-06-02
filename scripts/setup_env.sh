@@ -7,13 +7,11 @@ rm -rf .venv
 
 python3 -m venv .venv
 
-source .venv/bin/activate
+.venv/bin/python -m pip install --upgrade pip
 
-python -m pip install --upgrade pip
-
-python -m pip install -r requirements.txt
+.venv/bin/python -m pip install -r requirements.txt
 
 echo
 echo "[DONE] Local MkDocs environment is ready."
-echo "Activate with:"
-echo "  source .venv/bin/activate"
+echo "Run:"
+echo "  make serve"
