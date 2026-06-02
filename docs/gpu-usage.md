@@ -1,45 +1,45 @@
 # GPU Usage Rules
 
-## Before starting a job
+WS1 and WS2 are shared lab workstations. Check availability, communicate long jobs, and keep your work in your own folders.
 
-Check the dashboard:
+## Before using a GPU
 
-```text
-http://128.100.23.241/gpu
-```
+Check the [hardware dashboard](http://128.100.23.241/gpu). It requires ECE VPN or lab-network access.
 
-Check locally:
+Then check from the workstation:
 
 ```bash
 nvidia-smi
 ```
 
-## Long jobs
+Look for active processes, memory use, and the usernames shown by `nvidia-smi`.
 
-Use the long-use tracker for:
+## Long-use tracker
 
-- overnight jobs
-- multi-day jobs
-- jobs expected to occupy most GPU memory
-- jobs likely to block other users
+Use the [long-use tracker](usage-tracker.md) before starting:
+
+- overnight jobs,
+- multi-day jobs,
+- jobs expected to use most GPU memory,
+- jobs that may block other lab members.
 
 Short interactive tests normally do not need to be recorded.
 
-## Recommended long-running workflow
+## Long-running jobs
 
-Use `tmux`:
+Use `tmux` so your job can keep running if your SSH session disconnects:
 
 ```bash
 tmux new -s train
 ```
 
-Detach:
+Detach from the session:
 
 ```text
 Ctrl-b then d
 ```
 
-Reattach:
+Reattach later:
 
 ```bash
 tmux attach -t train
@@ -47,6 +47,9 @@ tmux attach -t train
 
 ## Etiquette
 
-- Do not kill another user's process without confirming with them.
-- Communicate before starting a very long GPU job.
-- Keep datasets and outputs in your own folders.
+- Do not kill or stop another user's job without confirmation.
+- Contact the user or admin if a job appears abandoned or is blocking urgent work.
+- Record long jobs before they start.
+- Keep datasets, checkpoints, and outputs in your own folders.
+- Clean up temporary files when a project is finished.
+- Avoid starting large jobs when both the dashboard and `nvidia-smi` show heavy use.

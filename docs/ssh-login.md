@@ -1,22 +1,34 @@
 # SSH Login
 
-## Basic SSH command
+Use SSH to log in to WS1 or WS2 from macOS, Linux, or Windows.
+
+## Prerequisites
+
+- Connect to ECE VPN or use the lab network first.
+- Use your own lab account.
+- Use Terminal on macOS/Linux or PowerShell/Windows Terminal on Windows.
+
+## Basic commands
+
+WS1:
 
 ```bash
 ssh <username>@128.100.23.241
 ```
 
-or:
+WS2:
 
 ```bash
 ssh <username>@128.100.23.242
 ```
 
-## Recommended SSH config
+Replace `<username>` with your lab username.
 
-Edit this file on your local computer:
+## Optional SSH config
 
-```bash
+On your local computer, you can add shortcuts in:
+
+```text
 ~/.ssh/config
 ```
 
@@ -40,14 +52,31 @@ Then connect with:
 
 ```bash
 ssh imed-ws1
+ssh imed-ws2
 ```
 
-## First login checklist
+## First-login checks
+
+After logging in, run:
 
 ```bash
 whoami
 pwd
-ls -ld ~/data ~/scratch
+ls -ld ~ ~/data ~/scratch
 nvidia-smi
 conda --version
 ```
+
+These checks confirm your account, working directory, storage folders, GPU visibility, and Conda access.
+
+## Common errors
+
+| Error | What to check |
+|---|---|
+| `Connection timed out` | Connect to ECE VPN, then try again |
+| `Could not resolve hostname imed-ws1` | Check your local `~/.ssh/config` entry |
+| `Permission denied` | Check your username and login method; contact the admin if it keeps failing |
+| `Host key verification failed` | Contact the admin before changing local SSH trust settings |
+| SSH connects, then disconnects | Try again from a fresh terminal and include the exact message when asking for help |
+
+Do not share passwords or private SSH keys when requesting help.

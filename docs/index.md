@@ -1,33 +1,36 @@
 # iMED Lab Server Guide
 
-This public guide explains how lab members can connect to and use the iMED lab GPU workstations.
+Use this public guide to get onto the iMED lab GPU workstations and work safely in the shared environment.
+
+## Start here
+
+1. Connect to ECE VPN or use the lab network.
+2. Open the [hardware dashboard](http://128.100.23.241/gpu) to check current GPU use.
+3. SSH into WS1 or WS2 with your lab account.
+4. Create a project Conda environment under your own account.
+5. Run work from your own folders only.
+6. Record long GPU jobs in the [long-use tracker](usage-tracker.md).
+
+!!! note
+    The dashboard is a simple status page. It requires ECE VPN or lab-network access, even though this documentation site is public.
 
 ## Quick links
 
-| Resource | Link |
+| Need | Link |
 |---|---|
-| Hardware dashboard | [Open dashboard](http://128.100.23.241/gpu) |
-| Long-use tracker | Replace this with your Google Sheet link |
-| VPN guide | [VPN troubleshooting](vpn.md) |
-| SSH login | [SSH Login](ssh-login.md) |
-| Conda setup | [Conda Environment](conda.md) |
+| Check GPU status | [Hardware dashboard](http://128.100.23.241/gpu) |
+| Record long GPU use | [Long-use tracker](usage-tracker.md) |
+| Fix connection issues | [VPN](vpn.md) |
+| Log in from a terminal | [SSH Login](ssh-login.md) |
+| Use VS Code | [VS Code Remote SSH](vscode-remote.md) |
+| Create Python environments | [Conda Environment](conda.md) |
+| Review shared-use rules | [GPU Usage Rules](gpu-usage.md) |
 
-!!! note
-    The hardware dashboard requires ECE VPN or lab-network access. This public guide stays available even when a user is troubleshooting VPN connection issues.
+## Workstations
 
-## Workstation summary
-
-| Machine | Purpose | User-facing status |
+| Workstation | Address | Use |
 |---|---|---|
-| WS1 | GPU workstation | Shown on the dashboard |
-| WS2 | GPU workstation | Shown on the dashboard |
+| WS1 | `128.100.23.241` | Shared GPU workstation |
+| WS2 | `128.100.23.242` | Shared GPU workstation |
 
-## Basic workflow
-
-1. Connect to ECE VPN or lab network.
-2. Check the [hardware dashboard](http://128.100.23.241/gpu).
-3. SSH into the assigned workstation.
-4. Work under your own account.
-5. Store persistent data in `~/data`.
-6. Store temporary training artifacts in `~/scratch`.
-7. For long jobs, add your plan to the long-use tracker.
+Check the dashboard before choosing a workstation. If you are unsure which machine to use, ask the lab server admin or your project lead.

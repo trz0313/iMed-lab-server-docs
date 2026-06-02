@@ -1,35 +1,54 @@
 # VPN
 
-The GPU dashboard and SSH access require ECE VPN or lab-network access.
+The GPU dashboard and SSH access are available only from ECE VPN or the lab network.
 
-## Checklist
+## Why VPN is required
 
-1. Confirm that the VPN client is connected.
-2. Confirm that the VPN account is active.
-3. Disconnect and reconnect the VPN.
-4. Try opening the hardware dashboard:
+WS1 and WS2 are internal lab workstations. When you are off campus or outside the lab network, VPN gives your computer access to the network path needed for the dashboard and SSH.
+
+The dashboard URL is:
 
 ```text
 http://128.100.23.241/gpu
 ```
 
-5. Try SSH after VPN is connected:
+## Symptoms of VPN failure
+
+| Symptom | What it usually means |
+|---|---|
+| Dashboard does not load | VPN is disconnected, the route is unavailable, or the workstation is temporarily unreachable |
+| SSH hangs or times out | Your computer cannot reach the workstation network |
+| SSH says `Connection refused` | You reached the host, but SSH may not be accepting the connection |
+| SSH says `Permission denied` | The network path works, but your login method or account access needs checking |
+| Dashboard opens but SSH fails | Your account or SSH setup may need help from the admin |
+
+## Basic checks
+
+Run these checks before asking for help:
+
+1. Confirm that your VPN client says it is connected.
+2. Disconnect and reconnect VPN.
+3. Try opening the [hardware dashboard](http://128.100.23.241/gpu).
+4. Try SSH from a terminal:
 
 ```bash
 ssh <username>@128.100.23.241
-```
-
-or:
-
-```bash
 ssh <username>@128.100.23.242
 ```
 
-## Common symptoms
+5. If you are on Windows, try the same commands in PowerShell or Windows Terminal.
+6. If you are on campus, check whether the issue also happens off campus with VPN enabled.
 
-| Symptom | Likely cause |
-|---|---|
-| Browser cannot open dashboard | VPN not connected, route unavailable, or dashboard host temporarily unreachable |
-| SSH timeout | VPN/routing problem |
-| Permission denied after SSH prompt | Wrong username/password/key |
-| Dashboard opens but SSH fails | Account may not exist on that machine |
+## What to send the admin
+
+If it still fails, send a short report with:
+
+- whether VPN shows as connected,
+- whether the dashboard loads,
+- which workstation you tried: WS1 or WS2,
+- the exact SSH command you ran,
+- the exact error message,
+- your operating system,
+- the approximate date and time of the attempt.
+
+Do not send passwords, private keys, or screenshots that expose sensitive personal information.
