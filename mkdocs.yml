@@ -8,39 +8,48 @@ repo_name: trz0313/iMed-lab-server-docs
 theme:
   name: material
   language: en
+  font: false
   features:
     - navigation.sections
     - navigation.expand
     - navigation.top
     - navigation.instant
+    - navigation.indexes
     - search.highlight
     - search.suggest
     - content.code.copy
   palette:
     - scheme: default
-      primary: blue
-      accent: blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: blue
-      accent: blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
 
+extra_css:
+  - stylesheets/extra.css
+
 nav:
   - Home: index.md
-  - VPN: vpn.md
-  - SSH Login: ssh-login.md
-  - VS Code Remote SSH: vscode-remote.md
-  - Directory Structure: directories.md
-  - Conda Environment: conda.md
-  - GPU Usage Rules: gpu-usage.md
-  - Hardware Dashboard: dashboard.md
-  - Long-Use Tracker: usage-tracker.md
-  - FAQ: faq.md
+  - Connect:
+      - VPN: vpn.md
+      - SSH Login: ssh-login.md
+      - VS Code Remote SSH: vscode-remote.md
+  - Work:
+      - Directory Structure: directories.md
+      - Conda Environment: conda.md
+  - Operate:
+      - GPU Usage Rules: gpu-usage.md
+      - Hardware Dashboard: dashboard.md
+      - Long-Use Tracker: usage-tracker.md
+  - Help:
+      - FAQ: faq.md
 
 markdown_extensions:
   - admonition
