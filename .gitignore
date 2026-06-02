@@ -3,3 +3,14 @@ site/
 .DS_Store
 __pycache__/
 *.pyc
+
+# Local AI assistant instruction files
+/AGENTS.md
+/AGENT.md
+/agent.md
+/CLAUDE.md
+/Claude.md
+/claude.md
+# Local AI assistant logs
+codex-*.log
+claude-*.log
