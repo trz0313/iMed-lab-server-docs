@@ -1,9 +1,9 @@
 site_name: iMED Lab Server Guide
 site_description: Public guide for iMED lab GPU workstations
-site_url: https://trz0313.github.io/lab-server-docs/
+site_url: https://trz0313.github.io/iMed-lab-server-docs/
 
-repo_url: https://github.com/trz0313/lab-server-docs
-repo_name: trz0313/lab-server-docs
+repo_url: https://github.com/trz0313/iMed-lab-server-docs
+repo_name: trz0313/iMed-lab-server-docs
 
 theme:
   name: material
