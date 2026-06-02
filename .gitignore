@@ -14,3 +14,5 @@ __pycache__/
 # Local AI assistant logs
 codex-*.log
 claude-*.log
+# Local Claude state
+.claude/

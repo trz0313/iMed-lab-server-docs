@@ -8,9 +8,22 @@ WS1 and WS2 are internal lab workstations. When you are off campus or outside th
 
 The dashboard URL is:
 
-```text
-http://128.100.23.241/gpu
-```
+[http://128.100.23.241/gpu](http://128.100.23.241/gpu)
+
+## Official ECE VPN setup links
+
+Use the official ECE setup page for your operating system:
+
+- [macOS ECE VPN setup](https://www.comm.utoronto.ca/~jli/applevpn.htm)
+- [Windows 11 ECE VPN setup](https://www.eecg.utoronto.ca/~matthew/vpn/win11-vpn/win11_vpn.htm)
+
+### macOS note
+
+After major macOS updates, VPN setup may need to be redone because system VPN support files can be reset or removed. If VPN stops working after a macOS update, revisit the [official macOS ECE VPN setup page](https://www.comm.utoronto.ca/~jli/applevpn.htm) and repeat the user-level setup steps.
+
+### Windows note
+
+When copying VPN passwords, preshared keys, or setup values, make sure there are no leading or trailing spaces. If login fails unexpectedly, paste the value into a plain text editor first, check for accidental spaces, then try again.
 
 ## Symptoms of VPN failure
 
@@ -39,6 +52,16 @@ ssh <username>@128.100.23.242
 5. If you are on Windows, try the same commands in PowerShell or Windows Terminal.
 6. If you are on campus, check whether the issue also happens off campus with VPN enabled.
 
+## Before reporting a server problem
+
+Confirm these points first:
+
+- VPN is connected.
+- You tried opening the [hardware dashboard](http://128.100.23.241/gpu).
+- You tried SSH from a terminal.
+- You have the exact error message.
+- You know your OS version and whether the issue started after an OS update.
+
 ## What to send the admin
 
 If it still fails, send a short report with:
@@ -49,6 +72,7 @@ If it still fails, send a short report with:
 - the exact SSH command you ran,
 - the exact error message,
 - your operating system,
+- whether the issue started after an OS update,
 - the approximate date and time of the attempt.
 
-Do not send passwords, private keys, or screenshots that expose sensitive personal information.
+Do not send passwords, preshared secrets, private keys, or screenshots that expose sensitive personal information.
