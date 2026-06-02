@@ -43,6 +43,7 @@ nav:
       - VS Code Remote SSH: vscode-remote.md
   - Work:
       - Directory Structure: directories.md
+      - Data Management: data-management.md
       - Conda Environment: conda.md
   - Operate:
       - GPU Usage Rules: gpu-usage.md

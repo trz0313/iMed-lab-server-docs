@@ -48,6 +48,14 @@ If terminal SSH fails, troubleshoot VPN and SSH first.
 
 If terminal SSH works but VS Code fails, restart VS Code and retry the Remote SSH connection.
 
+## Can I upload a large dataset to the lab workstations?
+
+Possibly, but confirm privacy and compliance first. For small or moderate data, use `rsync` or `scp`. For very large data, in-person copy or external drive transfer may be better than SSH upload.
+
+Personal data should go under `/data/<username>`. Shared data should use a project folder.
+
+See the [data management guide](data-management.md).
+
 ## Conda command not found
 
 Try:
