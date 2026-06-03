@@ -43,7 +43,7 @@ Review this checklist before upload:
 
 ## Uploading data over SSH
 
-Connect to ECE VPN or the lab network before uploading. Avoid uploading large datasets into `/home`.
+Connect to ECE VPN before uploading. Avoid uploading large datasets into `/home`.
 
 `rsync` is preferred for large transfers because it can resume partial transfers. `scp` is acceptable for small transfers.
 

@@ -31,7 +31,7 @@ Everything you need to get onto the iMED lab GPU workstations and work safely in
 
 ## Start here
 
-1. Connect to ECE VPN or use the lab network.
+1. Connect to ECE VPN.
 2. Open the [hardware dashboard](http://128.100.23.241/gpu) to check current GPU use.
 3. SSH into WS1 or WS2 with your lab account.
 4. Create a project Conda environment under your own account.
@@ -39,7 +39,7 @@ Everything you need to get onto the iMED lab GPU workstations and work safely in
 6. Record long GPU jobs in the [long-use tracker](usage-tracker.md).
 
 !!! note
-    The dashboard is a simple status page. It requires ECE VPN or lab-network access, even though this documentation site is public.
+    The dashboard is a simple status page. It requires ECE VPN access, even though this documentation site is public.
 
 ## Workstations
 

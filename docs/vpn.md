@@ -1,10 +1,10 @@
 # VPN
 
-The GPU dashboard and SSH access are available only from ECE VPN or the lab network.
+The GPU dashboard and SSH access are available only through ECE VPN.
 
 ## Why VPN is required
 
-WS1 and WS2 are internal lab workstations. When you are off campus or outside the lab network, VPN gives your computer access to the network path needed for the dashboard and SSH.
+WS1 and WS2 are internal lab workstations. ECE VPN gives your computer access to the network path needed for the dashboard and SSH.
 
 The dashboard URL is:
 
@@ -56,7 +56,7 @@ ssh <username>@128.100.23.242
 ```
 
 5. If you are on Windows, try the same commands in PowerShell or Windows Terminal.
-6. If you are on campus, check whether the issue also happens off campus with VPN enabled.
+6. Do not rely on campus or lab Wi-Fi as a substitute for ECE VPN.
 
 ## Before reporting a server problem
 

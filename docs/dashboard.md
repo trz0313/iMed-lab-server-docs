@@ -6,7 +6,7 @@ Dashboard URL:
 http://128.100.23.241/gpu
 ```
 
-The dashboard requires ECE VPN or lab-network access.
+The dashboard requires ECE VPN access.
 
 It shows:
 

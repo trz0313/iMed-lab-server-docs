@@ -4,7 +4,7 @@ WS1 and WS2 are shared lab workstations. Check availability, communicate long jo
 
 ## Before using a GPU
 
-Check the [hardware dashboard](http://128.100.23.241/gpu). It requires ECE VPN or lab-network access.
+Check the [hardware dashboard](http://128.100.23.241/gpu). It requires ECE VPN access.
 
 Then check from the workstation:
 

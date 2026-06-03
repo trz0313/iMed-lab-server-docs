@@ -2,7 +2,7 @@
 
 ## I cannot open the GPU dashboard.
 
-Dashboard access requires ECE VPN or lab-network access.
+Dashboard access requires ECE VPN access.
 
 Dashboard URL: [http://128.100.23.241/gpu](http://128.100.23.241/gpu)
 

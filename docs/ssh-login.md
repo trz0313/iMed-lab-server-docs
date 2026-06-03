@@ -4,7 +4,7 @@ Use SSH to log in to WS1 or WS2 from macOS, Linux, or Windows.
 
 ## Prerequisites
 
-- Connect to ECE VPN or use the lab network first.
+- Connect to ECE VPN first.
 - Use your own lab account.
 - Use Terminal on macOS/Linux or PowerShell/Windows Terminal on Windows.
 
