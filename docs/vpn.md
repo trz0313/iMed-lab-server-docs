@@ -17,6 +17,12 @@ Use the official ECE setup page for your operating system:
 - [macOS ECE VPN setup](https://www.comm.utoronto.ca/~jli/applevpn.htm)
 - [Windows 11 ECE VPN setup](https://www.eecg.utoronto.ca/~matthew/vpn/win11-vpn/win11_vpn.htm)
 
+## VPN access request form
+
+If you need VPN access, submit the [ECE VPN access request form](https://forms.gle/skRCvSu8B773ktrx6).
+
+If the form link stops working, ask the lab server admin for the current VPN access request form link. Do not send passwords or private keys through this documentation site.
+
 ### macOS note
 
 After major macOS updates, VPN setup may need to be redone because system VPN support files can be reset or removed. If VPN stops working after a macOS update, revisit the [official macOS ECE VPN setup page](https://www.comm.utoronto.ca/~jli/applevpn.htm) and repeat the user-level setup steps.

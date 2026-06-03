@@ -4,11 +4,11 @@ Use the long-use tracker when you plan to use a machine for a long-running job.
 
 ## Tracker link
 
-Replace this with your Google Sheet link:
+Open the shared lab Google Sheet tracker:
 
-```text
-https://docs.google.com/spreadsheets/d/...
-```
+[Open the lab GPU usage tracker](https://docs.google.com/spreadsheets/d/1E-Hmy2O6bf4FToMkE-382ZKDNxQ1rVju/edit?usp=sharing)
+
+If the link stops working, ask the lab server admin for the current tracker link.
 
 ## When to fill it in
 
@@ -23,19 +23,13 @@ Fill it in for:
 
 | Column | Meaning |
 |---|---|
-| Status | Planned / Running / Completed / Cancelled |
-| Machine | WS1 or WS2 |
-| GPU | GPU0 |
+| Date | Date of the planned GPU use |
 | User | Your name or username |
-| Project / Purpose | Short description |
-| Planned start | Expected start time |
-| Planned end | Expected end time |
-| Actual start | Actual start time |
-| Actual end | Actual end time |
-| Contact | Email / Slack / Teams |
-| PID / tmux session | Optional |
-| Notes | Optional |
+| Machine | WS1 or WS2 |
+| Expected job done period | Expected time or period when the job should finish |
 
 ## Rule of thumb
 
 Short tests do not need to be logged. Long jobs should be logged so others can plan around them.
+
+Do not put sensitive dataset details, passwords, private keys, or private user information in the tracker.
