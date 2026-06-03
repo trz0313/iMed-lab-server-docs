@@ -8,6 +8,8 @@ Open the shared lab Google Sheet tracker:
 
 [Open the lab GPU usage tracker](https://docs.google.com/spreadsheets/d/1E-Hmy2O6bf4FToMkE-382ZKDNxQ1rVju/edit?usp=sharing)
 
+The tracker should require a signed-in approved lab account to edit. Do not set it to "Anyone with the link can edit."
+
 If the link stops working, ask the lab server admin for the current tracker link.
 
 ## When to fill it in

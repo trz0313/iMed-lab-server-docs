@@ -47,16 +47,18 @@ Connect to ECE VPN or the lab network before uploading. Avoid uploading large da
 
 `rsync` is preferred for large transfers because it can resume partial transfers. `scp` is acceptable for small transfers.
 
+Use a clear dataset folder under your personal data root, for example `/data/<username>/<dataset-name>/`.
+
 rsync from macOS/Linux to WS1:
 
 ```bash
-rsync -avh --progress --partial /path/to/local/data/ <username>@128.100.23.241:/data/<username>/data/
+rsync -avh --progress --partial /path/to/local/data/ <username>@128.100.23.241:/data/<username>/<dataset-name>/
 ```
 
 rsync from macOS/Linux to WS2:
 
 ```bash
-rsync -avh --progress --partial /path/to/local/data/ <username>@128.100.23.242:/data/<username>/data/
+rsync -avh --progress --partial /path/to/local/data/ <username>@128.100.23.242:/data/<username>/<dataset-name>/
 ```
 
 scp for small transfers to WS1:

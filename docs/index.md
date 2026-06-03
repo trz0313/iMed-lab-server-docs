@@ -1,5 +1,5 @@
 <div class="imed-hero" markdown>
-<div class="eyebrow">iMED Lab · GPU Workstations</div>
+<div class="eyebrow">iMED LAB · GPU WORKSTATIONS</div>
 
 # iMED Lab Server Guide
 
@@ -15,13 +15,10 @@ Everything you need to get onto the iMED lab GPU workstations and work safely in
 
 <div class="grid cards" markdown>
 
-- __Hardware Dashboard__ — Check live GPU status. [Open](http://128.100.23.241/gpu)
-- __Long-Use Tracker__ — Record long GPU jobs. [Open](usage-tracker.md)
 - __VPN__ — Get on ECE VPN before anything else. [Open](vpn.md)
 - __SSH Login__ — Log in to WS1 / WS2 from a terminal. [Open](ssh-login.md)
 - __VS Code Remote SSH__ — Edit and run code over SSH. [Open](vscode-remote.md)
 - __Directory Structure__ — Where your data and scratch live. [Open](directories.md)
-- __Data Management__ — Store, transfer, and share datasets safely. [Open](data-management.md)
 - __Conda Environment__ — Create isolated Python environments. [Open](conda.md)
 - __GPU Usage Rules__ — Share the GPUs fairly and safely. [Open](gpu-usage.md)
 

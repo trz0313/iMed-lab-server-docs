@@ -10,6 +10,8 @@
   --imed-muted: #5b6573;
   --imed-border: #e4e8ef;
   --imed-surface: #ffffff;
+  --imed-heading-color: var(--imed-uoft-blue);
+  --imed-active-nav-color: var(--imed-uoft-blue);
 
   --md-primary-fg-color: var(--imed-uoft-blue);
   --md-primary-fg-color--light: var(--imed-uoft-blue-light);
@@ -37,12 +39,15 @@
   --imed-muted: #b8c4d4;
   --imed-border: #30415b;
   --imed-surface: #111a29;
+  --imed-heading-color: #c9dcf6;
+  --imed-active-nav-color: #8bd8ed;
   --md-code-bg-color: #182437;
   --md-code-fg-color: #8bd8ed;
 }
 
 body,
 .md-typeset {
+  color: var(--imed-text);
   font-family: var(--md-text-font);
 }
 
@@ -65,7 +70,7 @@ body,
 
 .md-nav__link--active,
 .md-nav__item--active > .md-nav__link {
-  color: var(--imed-uoft-blue);
+  color: var(--imed-active-nav-color);
   font-weight: 700;
 }
 
@@ -78,14 +83,14 @@ body,
 }
 
 .md-typeset h1 {
-  color: var(--imed-uoft-blue);
+  color: var(--imed-heading-color);
   font-weight: 800;
   letter-spacing: 0;
 }
 
 .md-typeset h2 {
   border-bottom: 1px solid var(--imed-border);
-  color: var(--imed-uoft-blue);
+  color: var(--imed-heading-color);
   font-weight: 700;
   letter-spacing: 0;
   padding-bottom: 0.35rem;
@@ -104,15 +109,22 @@ body,
 
 .md-typeset table:not([class]) th {
   background: var(--imed-light-grey);
-  color: var(--imed-uoft-blue);
+  color: var(--imed-heading-color);
   font-size: 0.72rem;
   letter-spacing: 0;
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    background: var(--imed-light-grey);
+    border-right: 1px solid var(--imed-border);
+  }
+}
+
 .imed-hero {
   background:
-    linear-gradient(135deg, rgba(0, 127, 163, 0.18) 0%, rgba(0, 127, 163, 0) 34%),
+    radial-gradient(900px 300px at 88% -40%, rgba(0, 127, 163, 0.4), transparent 60%),
     linear-gradient(180deg, var(--imed-uoft-blue), var(--imed-uoft-blue-dark));
   border-radius: 0 0 8px 8px;
   box-sizing: border-box;
@@ -193,9 +205,9 @@ body,
 @media screen and (max-width: 42em) {
   .imed-hero {
     margin: 0 0 1.5rem;
-    max-width: calc(100vw - 4rem);
+    max-width: 100%;
     padding: 2rem 1rem;
-    width: calc(100vw - 4rem);
+    width: min(calc(100vw - 2rem), 19rem);
   }
 
   .imed-hero h1 {
