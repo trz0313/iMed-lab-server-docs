@@ -26,8 +26,9 @@
   --md-default-fg-color: var(--imed-text);
   --md-default-fg-color--light: var(--imed-muted);
   --md-default-bg-color: #ffffff;
+  /* inline-code chip background; fenced blocks are overridden dark below */
   --md-code-bg-color: var(--imed-light-grey);
-  --md-code-fg-color: var(--imed-link-blue);
+  --md-code-fg-color: var(--imed-text);
 }
 
 [data-md-color-scheme="slate"] {
@@ -42,7 +43,7 @@
   --imed-heading-color: #c9dcf6;
   --imed-active-nav-color: #8bd8ed;
   --md-code-bg-color: #182437;
-  --md-code-fg-color: #8bd8ed;
+  --md-code-fg-color: #d7e2f4;
 }
 
 body,
@@ -57,14 +58,15 @@ body,
 
 .md-header__title {
   font-weight: 700;
-  letter-spacing: 0;
+  letter-spacing: -0.2px;
 }
 
+/* ===== Sidebar nav ===== */
 .md-nav__title {
   color: var(--imed-muted);
   font-size: 0.62rem;
   font-weight: 700;
-  letter-spacing: 0;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 
@@ -82,17 +84,18 @@ body,
   }
 }
 
+/* ===== Headings — tight tracking ===== */
 .md-typeset h1 {
   color: var(--imed-heading-color);
   font-weight: 800;
-  letter-spacing: 0;
+  letter-spacing: -1px;
 }
 
 .md-typeset h2 {
   border-bottom: 1px solid var(--imed-border);
   color: var(--imed-heading-color);
   font-weight: 700;
-  letter-spacing: 0;
+  letter-spacing: -0.3px;
   padding-bottom: 0.35rem;
 }
 
@@ -100,18 +103,108 @@ body,
   color: var(--imed-boundless-blue);
 }
 
+/* ===== Inline code — light chip with boundless-blue text ===== */
 .md-typeset :not(pre) > code {
   background: var(--imed-light-grey);
   border: 1px solid var(--imed-border);
   border-radius: 4px;
-  color: var(--md-code-fg-color);
+  color: var(--imed-link-blue);
 }
 
+/* ===== Fenced code blocks — dark navy (matches the approved mock) ===== */
+[data-md-color-scheme="default"] .md-typeset pre > code {
+  background: #1b2942;
+  color: #d7e2f4;
+}
+
+[data-md-color-scheme="default"] .md-typeset .highlight > pre,
+[data-md-color-scheme="default"] .md-typeset pre > code {
+  border-radius: 9px;
+}
+
+/* Copy button stays legible on the dark block */
+[data-md-color-scheme="default"] .md-typeset .md-clipboard {
+  color: rgba(215, 226, 244, 0.55);
+}
+
+[data-md-color-scheme="default"] .md-typeset .md-clipboard:hover {
+  color: #d7e2f4;
+}
+
+/* Syntax-highlight palette tuned for the dark navy block (light mode).
+   Material renders Pygments token classes inside .highlight. */
+[data-md-color-scheme="default"] .md-typeset .highlight .c,
+[data-md-color-scheme="default"] .md-typeset .highlight .c1,
+[data-md-color-scheme="default"] .md-typeset .highlight .cm,
+[data-md-color-scheme="default"] .md-typeset .highlight .ch,
+[data-md-color-scheme="default"] .md-typeset .highlight .cs,
+[data-md-color-scheme="default"] .md-typeset .highlight .cp {
+  color: #7e8aa3;           /* comments */
+  font-style: italic;
+}
+
+[data-md-color-scheme="default"] .md-typeset .highlight .k,
+[data-md-color-scheme="default"] .md-typeset .highlight .kd,
+[data-md-color-scheme="default"] .md-typeset .highlight .kn,
+[data-md-color-scheme="default"] .md-typeset .highlight .kc,
+[data-md-color-scheme="default"] .md-typeset .highlight .kr,
+[data-md-color-scheme="default"] .md-typeset .highlight .kt,
+[data-md-color-scheme="default"] .md-typeset .highlight .ow {
+  color: #8fb8ff;           /* keywords */
+}
+
+[data-md-color-scheme="default"] .md-typeset .highlight .s,
+[data-md-color-scheme="default"] .md-typeset .highlight .s1,
+[data-md-color-scheme="default"] .md-typeset .highlight .s2,
+[data-md-color-scheme="default"] .md-typeset .highlight .sb,
+[data-md-color-scheme="default"] .md-typeset .highlight .sc,
+[data-md-color-scheme="default"] .md-typeset .highlight .sd,
+[data-md-color-scheme="default"] .md-typeset .highlight .se,
+[data-md-color-scheme="default"] .md-typeset .highlight .sh,
+[data-md-color-scheme="default"] .md-typeset .highlight .si,
+[data-md-color-scheme="default"] .md-typeset .highlight .sx {
+  color: #9ad4a0;           /* strings */
+}
+
+[data-md-color-scheme="default"] .md-typeset .highlight .nb,
+[data-md-color-scheme="default"] .md-typeset .highlight .nf,
+[data-md-color-scheme="default"] .md-typeset .highlight .fm,
+[data-md-color-scheme="default"] .md-typeset .highlight .nc {
+  color: #6fd0e8;           /* builtins / functions / classes */
+}
+
+[data-md-color-scheme="default"] .md-typeset .highlight .mi,
+[data-md-color-scheme="default"] .md-typeset .highlight .mf,
+[data-md-color-scheme="default"] .md-typeset .highlight .mh,
+[data-md-color-scheme="default"] .md-typeset .highlight .mo,
+[data-md-color-scheme="default"] .md-typeset .highlight .il {
+  color: #e0a878;           /* numbers */
+}
+
+[data-md-color-scheme="default"] .md-typeset .highlight .nv,
+[data-md-color-scheme="default"] .md-typeset .highlight .vi,
+[data-md-color-scheme="default"] .md-typeset .highlight .vg,
+[data-md-color-scheme="default"] .md-typeset .highlight .nt {
+  color: #c7b6f0;           /* variables / tags */
+}
+
+[data-md-color-scheme="default"] .md-typeset .highlight .o,
+[data-md-color-scheme="default"] .md-typeset .highlight .p,
+[data-md-color-scheme="default"] .md-typeset .highlight .gp {
+  color: #aebdd4;           /* operators / punctuation / shell prompt */
+}
+
+[data-md-color-scheme="default"] .md-typeset .highlight .err {
+  color: #ff9a8c;
+  background: none;
+}
+
+/* ===== Tables ===== */
 .md-typeset table:not([class]) th {
   background: var(--imed-light-grey);
   color: var(--imed-heading-color);
   font-size: 0.72rem;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
 }
 
@@ -122,11 +215,12 @@ body,
   }
 }
 
+/* ===== Homepage hero ===== */
 .imed-hero {
   background:
     radial-gradient(900px 300px at 88% -40%, rgba(0, 127, 163, 0.4), transparent 60%),
     linear-gradient(180deg, var(--imed-uoft-blue), var(--imed-uoft-blue-dark));
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 14px 14px;
   box-sizing: border-box;
   color: #ffffff;
   margin: -1.2rem -1.2rem 2rem;
@@ -137,14 +231,14 @@ body,
   color: rgba(255, 255, 255, 0.68);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
 }
 
 .imed-hero h1 {
   color: #ffffff;
   font-size: 2.6rem;
-  letter-spacing: 0;
+  letter-spacing: -1.2px;
   margin: 0.5rem 0 0.6rem;
 }
 
@@ -152,6 +246,50 @@ body,
   color: rgba(255, 255, 255, 0.84);
   font-size: 1.05rem;
   max-width: 56ch;
+}
+
+/* hero action buttons */
+.imed-hero-actions {
+  margin: 1.4rem 0 0.2rem;
+}
+
+.imed-hero-actions > p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+  max-width: none;
+}
+
+.md-typeset .imed-btn {
+  align-items: center;
+  border-radius: 7px;
+  box-sizing: border-box;
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.md-typeset .imed-btn--primary {
+  background: var(--imed-boundless-blue);
+  color: #ffffff;
+}
+
+.md-typeset .imed-btn--primary:hover {
+  background: #0090b8;
+}
+
+.md-typeset .imed-btn--ghost {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.md-typeset .imed-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .imed-machines {
@@ -165,7 +303,7 @@ body,
 .imed-machines > div {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 8px;
+  border-radius: 10px;
   min-width: 0;
   padding: 1rem 1.2rem;
 }
@@ -185,16 +323,51 @@ body,
   word-break: break-word;
 }
 
+/* ===== Quick-link cards — accent bar + hover arrow ===== */
 .md-typeset .grid.cards > ul > li {
   border: 1px solid var(--imed-border);
-  border-radius: 8px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
   transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.md-typeset .grid.cards > ul > li::before {
+  background: var(--imed-boundless-blue);
+  content: "";
+  height: 3px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.15s ease;
+  width: 100%;
+}
+
+.md-typeset .grid.cards > ul > li::after {
+  color: var(--imed-boundless-blue);
+  content: "\2192";
+  font-size: 1.1rem;
+  opacity: 0;
+  position: absolute;
+  right: 1rem;
+  bottom: 0.85rem;
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .md-typeset .grid.cards > ul > li:hover {
   border-color: #cdd6e3;
-  box-shadow: 0 10px 26px rgba(30, 55, 101, 0.1);
+  box-shadow: 0 10px 30px rgba(30, 55, 101, 0.1);
   transform: translateY(-2px);
+}
+
+.md-typeset .grid.cards > ul > li:hover::before {
+  opacity: 1;
+}
+
+.md-typeset .grid.cards > ul > li:hover::after {
+  opacity: 1;
+  transform: translateX(3px);
 }
 
 [data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover {
@@ -205,23 +378,37 @@ body,
 @media screen and (max-width: 42em) {
   .imed-hero {
     margin: 0 0 1.5rem;
-    max-width: 100%;
-    padding: 2rem 1rem;
-    width: min(calc(100vw - 2rem), 19rem);
+    max-width: none;
+    padding: 2rem 1.2rem;
+    width: auto;
   }
 
   .imed-hero h1 {
-    font-size: 1.55rem;
-    line-height: 1.1;
+    font-size: 1.45rem;
+    line-height: 1.12;
     max-width: 100%;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     white-space: normal;
   }
 
-  .imed-hero p {
+  .imed-hero-actions > p {
+    flex-direction: column;
+  }
+
+  .md-typeset .imed-hero-actions .imed-btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .imed-hero > p {
     font-size: 0.95rem;
-    max-width: 26ch;
+    max-width: 24ch;
     overflow-wrap: anywhere;
+  }
+
+  .imed-hero-actions > p {
+    max-width: 16rem;
+    width: 100%;
   }
 
   .imed-machines {
@@ -236,6 +423,10 @@ body,
   }
 
   .md-typeset .grid.cards > ul > li:hover {
+    transform: none;
+  }
+
+  .md-typeset .grid.cards > ul > li:hover::after {
     transform: none;
   }
 }
