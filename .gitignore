@@ -16,3 +16,32 @@ codex-*.log
 claude-*.log
 # Local Claude state
 .claude/
+
+# Local/private material that should not be published
+/local/
+/private/
+/docs/_private/
+/docs/assets/private/
+/docs/assets/forms/private/
+
+# Environment files and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.ovpn
+*.mobileconfig
+
+# Filled forms, submissions, and private copies
+*filled*
+*signed*
+*submission*
+*_private.xlsx
+*_private.xls
+*_filled.xlsx
+*_filled.xls
+*_submission.xlsx
+*_submission.xls
+*_signed.xlsx
+*_signed.xls
