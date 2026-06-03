@@ -12,7 +12,7 @@ Then check from the workstation:
 nvidia-smi
 ```
 
-Look for active processes, memory use, and the usernames shown by `nvidia-smi`.
+Look for active processes, GPU memory use, and process IDs. `nvidia-smi` may not show usernames directly; if you need to identify a process owner, use the dashboard or ask the lab server admin.
 
 ## Long-use tracker
 

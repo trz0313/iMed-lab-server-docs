@@ -61,8 +61,7 @@ See the [data management guide](data-management.md).
 Try:
 
 ```bash
-source /etc/profile
-export PATH=/opt/conda/bin:$PATH
+source /opt/conda/etc/profile.d/conda.sh
 conda --version
 ```
 
