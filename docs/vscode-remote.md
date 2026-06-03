@@ -32,9 +32,9 @@ If the host does not appear, check your local `~/.ssh/config` or use:
 Recommended folders:
 
 ```text
-~/code
-~/data
-~/scratch
+/home/<username>/code
+/data/<username>
+/scratch/<username>
 ```
 
 Do not open, edit, or search through other users' private folders.

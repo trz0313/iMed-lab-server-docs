@@ -6,13 +6,14 @@ The workstations have a global Conda installation at:
 /opt/conda
 ```
 
-Use it to create your own project environments. Do not modify the global Conda installation.
+Use it to create your own project environments. The global base environment is read-only for normal use; do not install packages into `/opt/conda` or modify the global Conda installation.
 
 ## Check Conda
 
 ```bash
 conda --version
 conda env list
+conda info
 ```
 
 If `conda` is not available in your shell, try:
@@ -30,6 +31,8 @@ Use a clear environment name for each project:
 conda create -n myproject python=3.10
 conda activate myproject
 ```
+
+Named environments are stored in your user Conda environment directory, normally under `/home/<username>/.conda/envs`. They are not installed into `/opt/conda`.
 
 Install project packages inside the active environment:
 

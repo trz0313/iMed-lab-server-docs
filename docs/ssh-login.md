@@ -62,7 +62,7 @@ After logging in, run:
 ```bash
 whoami
 pwd
-ls -ld ~ ~/data ~/scratch
+ls -ld ~ /data/$USER /scratch/$USER
 nvidia-smi
 conda --version
 ```

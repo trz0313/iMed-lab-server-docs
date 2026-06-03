@@ -15,8 +15,10 @@ This page explains where to store data, how to upload datasets, when to request 
 | `/home/<username>` | Code, configuration files, SSH/VS Code settings, small project files | Keep large datasets out of home directories |
 | `/data/<username>` | Persistent personal working data | Use this for personal datasets and project work that does not need shared access |
 | `/scratch/<username>` | Temporary training artifacts, cache, checkpoints, intermediate outputs | Do not treat scratch as permanent storage |
-| `/data/projects/<project>` | Shared project data | Request this when multiple users need access; it should be created by admin with explicit membership and permissions |
+| `/data/projects/<project>` | Shared project data, when created | Request this when multiple users need access; project folders are created by admin only when needed |
 | `/opt/conda` | Shared Conda installation | Not a place for datasets or user project files |
+
+Shared project folders are not pre-created by default. Do not assume `/data/projects` exists until an admin has created a project folder for your group.
 
 Do not use temporary or test mounts unless an admin explicitly confirms that they are safe for your dataset and workflow.
 
